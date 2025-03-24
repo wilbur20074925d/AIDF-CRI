@@ -96,10 +96,10 @@ A higher DTD indicates that the firm is further away from default, i.e., it has 
 
 ## 3. Numerical Implementation Details
 
-- **Volatility (\( \sigma \))** is assumed to be 4.6940 across firms
-- **Time horizon** \( T \) is fixed at 1 year
+- **Volatility ($\sigma$)** is assumed to be 4.6940 across firms
+- **Time horizon** $T$ is fixed at 1 year
 - **Risk-free rate** is annualized from daily values by multiplying by 250
-- **Convergence tolerance** for Newton-Raphson is \( 10^{-8} \)
+- **Convergence tolerance** for Newton-Raphson is $10^{-8}$
 - **Maximum iterations** is capped to avoid infinite loops
 
 ---
