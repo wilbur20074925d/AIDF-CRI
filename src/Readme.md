@@ -1,3 +1,21 @@
+# DTD Calculator – Technical Implementation and Conceptual Understanding
+
+This README outlines the technical methodology used to compute the **Implied Asset Value (AV)** and the **Distance to Default (DTD)** for firms using the Merton model. It also provides a discussion of the conceptual background and real-world significance of these metrics.
+
+---
+
+## 1. Step-by-Step Calculation Logic
+
+This section details the mathematical formulas and steps implemented in `dtd_calculator.py`.
+
+### Step 1: Compute Effective Liabilities (L)
+
+We calculate an effective liability threshold using a weighted sum of debt components:
+
+\[
+L = Short Term Debt + 0.5 × Long Term Debt + weight × Other Liability
+\]
+
 Where:
 
 - `weight = 0.3466` (empirically calibrated)
