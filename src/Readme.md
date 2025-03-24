@@ -28,11 +28,11 @@ Where:
 The core idea is to treat the firm's equity as a European call option on its asset value $$ V $$, with a strike price equal to its liability \( L \).
 
 Given:
-- $$ E $$: Market capitalization (observed equity value)
-- $$ L $$: Effective liability (as above)
-- $$ r $$: Annual risk-free rate (daily rate × 250)
-- $$ \sigma $$: Asset volatility (assumed constant at 4.6940)
-- $$ T = 1 $$: Time horizon of one year
+- $ E $: Market capitalization (observed equity value)
+- $ L $: Effective liability (as above)
+- $ r $: Annual risk-free rate (daily rate × 250)
+- $ \sigma $: Asset volatility (assumed constant at 4.6940)
+- $ T = 1 $: Time horizon of one year
 
 We define:
 
