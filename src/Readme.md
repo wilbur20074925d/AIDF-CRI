@@ -25,32 +25,32 @@ Where:
 
 ### Step 2: Estimate Asset Value (V) Using the Black-Scholes Model
 
-The core idea is to treat the firm's equity as a European call option on its asset value \( V \), with a strike price equal to its liability \( L \).
+The core idea is to treat the firm's equity as a European call option on its asset value $$ V $$, with a strike price equal to its liability \( L \).
 
 Given:
-- \( E \): Market capitalization (observed equity value)
-- \( L \): Effective liability (as above)
-- \( r \): Annual risk-free rate (daily rate × 250)
-- \( \sigma \): Asset volatility (assumed constant at 4.6940)
-- \( T = 1 \): Time horizon of one year
+- $$ E $$: Market capitalization (observed equity value)
+- $$ L $$: Effective liability (as above)
+- $$ r $$: Annual risk-free rate (daily rate × 250)
+- $$ \sigma $$: Asset volatility (assumed constant at 4.6940)
+- $$ T = 1 $$: Time horizon of one year
 
 We define:
 
-\[
+$$
 d_1 = \frac{\ln\left(\frac{V}{L}\right) + \left(r + \frac{1}{2}\sigma^2\right)T}{\sigma \sqrt{T}}
-\]
+$$
 
-\[
+$$
 d_2 = d_1 - \sigma \sqrt{T}
-\]
+$$
 
-\[
+$$
 E = V \cdot N(d_1) - L \cdot e^{-rT} \cdot N(d_2)
-\]
+$$
 
-Where \( N(\cdot) \) is the cumulative distribution function of the standard normal distribution.
+Where $ N(\cdot) $ is the cumulative distribution function of the standard normal distribution.
 
-We solve this equation using the **Newton-Raphson method** to find the root (i.e., the value of \( V \)) that satisfies the observed equity \( E \).
+We solve this equation using the **Newton-Raphson method** to find the root (i.e., the value of $$ V $$) that satisfies the observed equity $$ E $$.
 
 ---
 
@@ -58,9 +58,9 @@ We solve this equation using the **Newton-Raphson method** to find the root (i.e
 
 Once we estimate the implied asset value \( V \), we compute DTD as:
 
-\[
+$$
 DTD = \frac{\ln\left(\frac{V}{L}\right)}{\sigma \sqrt{T}}
-\]
+$$
 
 A higher DTD indicates that the firm is further away from default, i.e., it has stronger creditworthiness.
 
