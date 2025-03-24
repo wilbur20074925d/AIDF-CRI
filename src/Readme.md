@@ -12,9 +12,9 @@ This section details the mathematical formulas and steps implemented in `dtd_cal
 
 We calculate an effective liability threshold using a weighted sum of debt components:
 
-\[
+$$
 L = Short Term Debt + 0.5 × Long Term Debt + weight × Other Liability
-\]
+$$
 
 Where:
 
